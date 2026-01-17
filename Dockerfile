@@ -2,7 +2,7 @@ FROM node:22-alpine
 
 WORKDIR /out/app
 
-COPY package.json pnpm-lock.yml ./ 
+COPY package.json pnpm-lock.yaml ./ 
 
 RUN pnpm install
 
