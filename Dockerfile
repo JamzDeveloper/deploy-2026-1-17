@@ -2,12 +2,12 @@ FROM node:22-alpine
 
 WORKDIR /out/app
 
-COPY package.json pnpm-lock.yaml ./ 
+COPY package.json package-lock.json ./ 
 
-RUN pnpm install
+RUN npm install
 
 COPY src/ ./src
 
 EXPOSE 3000
 
-CMD ["pnpm", "start"]
+CMD ["npm", "start"]
